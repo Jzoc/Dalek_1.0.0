@@ -1,0 +1,76 @@
+
+                         __     __     ______     __         ______     ______     __    __     ______        ______   ______
+                        /\ \  _ \ \   /\  ___\   /\ \       /\  ___\   /\  __ \   /\ "-./  \   /\  ___\      /\__  _\ /\  __ \
+                        \ \ \/ ".\ \  \ \  __\   \ \ \____  \ \ \____  \ \ \/\ \  \ \ \-./\ \  \ \  __\      \/_/\ \/ \ \ \/\ \
+                         \ \__/".~\_\  \ \_____\  \ \_____\  \ \_____\  \ \_____\  \ \_\ \ \_\  \ \_____\       \ \_\  \ \_____\
+                          \/_/   \/_/   \/_____/   \/_____/   \/_____/   \/_____/   \/_/  \/_/   \/_____/        \/_/   \/_____/
+
+__/\\\\\\\\\\\\____        _____/\\\\\\\\\____        __/\\\_____________        __/\\\\\\\\\\\\\\\_        __/\\\________/\\\_        _____/\\\____
+ _\/\\\////////\\\__        ___/\\\\\\\\\\\\\__        _\/\\\_____________        _\/\\\///////////__        _\/\\\_____/\\\//__        ___/\\\\\\\__
+  _\/\\\______\//\\\_        __/\\\/////////\\\_        _\/\\\_____________        _\/\\\_____________        _\/\\\__/\\\//_____        __/\\\\\\\\\_
+   _\/\\\_______\/\\\_        _\/\\\_______\/\\\_        _\/\\\_____________        _\/\\\\\\\\\\\_____        _\/\\\\\\//\\\_____        _\//\\\\\\\__
+    _\/\\\_______\/\\\_        _\/\\\\\\\\\\\\\\\_        _\/\\\_____________        _\/\\\///////______        _\/\\\//_\//\\\____        __\//\\\\\___
+     _\/\\\_______\/\\\_        _\/\\\/////////\\\_        _\/\\\_____________        _\/\\\_____________        _\/\\\____\//\\\___        ___\//\\\____
+      _\/\\\_______/\\\__        _\/\\\_______\/\\\_        _\/\\\_____________        _\/\\\_____________        _\/\\\_____\//\\\__        ____\///_____
+       _\/\\\\\\\\\\\\/___        _\/\\\_______\/\\\_        _\/\\\\\\\\\\\\\\\_        _\/\\\\\\\\\\\\\\\_        _\/\\\______\//\\\_        _____/\\\____
+        _\////////////_____        _\///________\///__        _\///////////////__        _\///////////////__        _\///________\///__        ____\///_____
+
+                                                              A Game by Gustav Granlund (2019)
+
+                                                           (the more confusing version of Pac-Man)
+          Nevertheless the rules are simple. You play as the the doctor (the white square) who is being hunted by a group of Dalek in a maze (the orange squares).
+                                            You're mission is to stay alive and avoid the Dalek for as long as possible.
+
+                                                "But how do I win?" you might ask. By killing the Dalek of course!
+                                        This is done by luring two Dalek into each other so they crash, creating a pile of Junk.
+                                                If another Dalek walks into a pile of Junk, they too will die.
+
+                                                    But be careful, you can't go through a pile of Junk.
+
+          And remember, if you get into a place with way to get out, you can always use your trusty Sonic Screwdriver to teleport to a new location in the maze,
+                                                  but be aware you could also teleport right into another Dalek.
+
+                                                        You use the arrow keys to move and S to teleport.
+
+                                                                            GOOD LUCK!
+
+                                          -___________-                                                   .---.
+                                         (/     _     \)                                                 |    '.|  __
+                                         /_____(O)_____\                                                 |  ___.--'  )          I am The Doctor. Simply The Doctor. The one, the only, and the best.
+                                         // / / | \ \ \\                                                _.-'_` _%%%_/           /
+                                        =================                                            .-'%%% a: a %%%
+                                        // / | | | | \ \\    - EXTERMINATE! EXTERMINATE!                 %%  L   %%_
+                                       ===================                                               _%\'=' |  /-.__
+                                      //// || || || || \\\\                                           .-' / )--' #/     '\
+                                      |||| || || || || ||||                                         /'  /  /---'(    :   \
+                                     /---___-----------,---\                                       /   |  /( /|##|  \     |
+                                     |  /   \         -o-  |                                      /   ||# | / | /|   \    \
+                                     /  \___/          '   \                                      |   ||##| I \/ |   |   _|
+                                     +---------------------+                                      |   ||: | o  |#|   |  / |
+                                    /_   __    ___    __   _\                                     |   ||  / I  |:/  /   |/
+                                   (__) (__)  (___)  (__) (__)                                    |   ||  | o   /  /    /
+                                   |_    __    ___    __    _|                                    |   \|  | I  |. /    /
+                                  (__)  (__)  (___)  (__)  (__)                                    \  /|##| o  |.|    /
+                                  /_    ___    ___    ___    _\                                     \/ \::|/\_ /  ---'|
+                                 (__)  (___)  (___)  (___)  (__)                                     \ |\ |    |     :\
+                                 |_     ___    ___    ___     _|                                       | |  /     \...' |
+                                (__)   (___)  (___)  (___)   (__)                                      | |# |/\    \    |
+                                /_______________________________\                                      | | :|  |    |   |
+                                                                                                       | |  |  |    |   |
+
+Art by: Shanaka Dias
+(https://www.asciiart.eu/television/doctor-who)
+
+There are two ready made maps to chose from, Easy and Hard.
+You can also make your own map:
+Use * for walls
+Use D for the starting position for the doctor
+Use A for the starting position of the Dalek (at least one)
+Use # for Junk (if you want to have junk from the start)
+
+Remember that all lines must be of equal length and that the map must be a 20x20 square.
+
+The two ready made maps are:
+Easy
+Hard
+Or enter the file name of your own map.
