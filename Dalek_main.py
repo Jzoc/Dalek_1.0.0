@@ -248,20 +248,21 @@ class Game():
         # Move the player if an arrow key is pressed
         # For each step taken, dalek moves towards doctor
             key = pg.key.get_pressed()
-            if key[pg.K_LEFT]:
-                player.move(-20, 0)
-            if key[pg.K_RIGHT]:
-                player.move(20, 0)
-            if key[pg.K_UP]:
-                player.move(0, -20)
-            if key[pg.K_DOWN]:
-                player.move(0, 20)
+            if not End:
+                if key[pg.K_LEFT]:
+                    player.move(-20, 0)
+                if key[pg.K_RIGHT]:
+                    player.move(20, 0)
+                if key[pg.K_UP]:
+                    player.move(0, -20)
+                if key[pg.K_DOWN]:
+                    player.move(0, 20)
         # Teleport the doctor to a random position on the map, not into a wall, or junk
-            if key[pg.K_s] and not End:
-                t_pos = list(set(floor_pos_list)-set(junk_pos_list))
-                new_pos = rnd.choice(t_pos)
-                player.rect.x = new_pos[0]
-                player.rect.y = new_pos[1]
+                if key[pg.K_s]:
+                    t_pos = list(set(floor_pos_list)-set(junk_pos_list))
+                    new_pos = rnd.choice(t_pos)
+                    player.rect.x = new_pos[0]
+                    player.rect.y = new_pos[1]
         # --- Drawing code should go here
         screen = pg.display.set_mode((400, 400))
         pg.display.set_caption("Dalek_PreAlpha")
