@@ -40,7 +40,7 @@ class Player(object):
                     dalek.move(0, 20)
                 if dalek.rect.y > self.rect.y:
                     dalek.move(0, -20)
-            elif d_y == 0: # The doctor and dalek are above and below each other 
+            elif d_y == 0: # The doctor and dalek are above and below each other
                 if dalek.rect.x < self.rect.x:
                     dalek.move(20, 0)
                 if dalek.rect.x > self.rect.x:
@@ -202,6 +202,12 @@ class Game():
             loop = False
         except FileNotFoundError:
             print("No such file in directory.")
+        except PermissionError:
+            print("No such file in directory.")
+        except OSError:
+            print("No such file in directory.")
+        except SyntaxError:
+            print("No such file in directory.")
     for i in MapData:
         if not re.match("^[DA*.#]*$", i):
             raise ValueError("""Error: Only (D), (A), (*), (.), (#) are allowed!
@@ -231,6 +237,7 @@ class Game():
         x = 0
     # --- Main event loop
     CarryOn = True
+    End = False
     while CarryOn:
         for event in pg.event.get():  # User did something
             if event.type == pg.QUIT:  # If user clicked close
@@ -250,7 +257,7 @@ class Game():
             if key[pg.K_DOWN]:
                 player.move(0, 20)
         # Teleport the doctor to a random position on the map, not into a wall, or junk
-            if key[pg.K_s]:
+            if key[pg.K_s] and not End:
                 t_pos = list(set(floor_pos_list)-set(junk_pos_list))
                 new_pos = rnd.choice(t_pos)
                 player.rect.x = new_pos[0]
@@ -293,6 +300,7 @@ class Game():
                 screen.blit(LoseText, (200 - LoseText.get_width() // 2, 150))
                 LoseDesc = font2.render("YOU WERE CAUGHT BY A DALEK", 1, WHITE)
                 screen.blit(LoseDesc, (200 - LoseDesc.get_width() // 2, 200))
+                End = True
         if len(dalek_list) == 0:  # If no Daleks are left the game will end
             # If you win or lose the game, display the relevant info
             screen.fill(BLACK)
@@ -300,6 +308,7 @@ class Game():
             screen.blit(WinText, (200 - WinText.get_width() // 2, 150))
             WinDesc = font2.render("ALL DALEKS ARE DEAD", 1, WHITE)
             screen.blit(WinDesc, (200 - WinDesc.get_width() // 2, 200))
+            End = True
         # flip screen between frames
         pg.display.flip()
         # --- Limit to 60 frames per second
