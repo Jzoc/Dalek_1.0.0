@@ -31,7 +31,7 @@ class Player(object):
             d_y = abs(self.rect.y - dalek.rect.y)
             if not d_y == 0:
                 R = (d_x/d_y)
-            if d_x == 0:
+            if d_x == 0: # The doctor and dalek are on the same level
                 if dalek.rect.x < self.rect.x:
                     dalek.move(20, 0)
                 if dalek.rect.x > self.rect.x:
@@ -40,7 +40,7 @@ class Player(object):
                     dalek.move(0, 20)
                 if dalek.rect.y > self.rect.y:
                     dalek.move(0, -20)
-            elif d_y == 0:
+            elif d_y == 0: # The doctor and dalek are above and below each other 
                 if dalek.rect.x < self.rect.x:
                     dalek.move(20, 0)
                 if dalek.rect.x > self.rect.x:
@@ -49,7 +49,7 @@ class Player(object):
                     dalek.move(0, 20)
                 if dalek.rect.y > self.rect.y:
                     dalek.move(0, -20)
-            elif d_x > d_y:
+            elif d_x > d_y: # the dalek is further to the side than above or below
                 r_x = rnd.randrange(1, d_x)
                 r_y = rnd.randrange(1, d_y)
                 r = (r_x/r_y)
@@ -71,7 +71,7 @@ class Player(object):
                         dalek.move(0, 20)
                     elif dalek.rect.y > self.rect.y:
                         dalek.move(0, -20)
-            elif d_x < d_y:
+            elif d_x < d_y: # the dalek is further above or below, than to the side
                 r_x = rnd.randrange(1, d_x)
                 r_y = rnd.randrange(1, d_y)
                 r = (r_x / r_y)
@@ -93,7 +93,7 @@ class Player(object):
                         dalek.move(0, 20)
                     if dalek.rect.y > self.rect.y:
                         dalek.move(0, -20)
-            elif d_x == d_y:
+            elif d_x == d_y: # The doctor and dalek are on a diagonal
                 if dalek.rect.x < self.rect.x:
                     dalek.move(20, 0)
                 if dalek.rect.x > self.rect.x:
