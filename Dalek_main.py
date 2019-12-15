@@ -50,8 +50,8 @@ class Player(object):
                 if dalek.rect.y > self.rect.y:
                     dalek.move(0, -20)
             elif d_x > d_y: # the dalek is further to the side than above or below
-                r_x = rnd.randrange(1, d_x)
-                r_y = rnd.randrange(1, d_y)
+                r_x = rnd.randrange(1, d_x+1)
+                r_y = rnd.randrange(1, d_y+1)
                 r = (r_x/r_y)
                 if r > R:
                     if dalek.rect.x < self.rect.x:
@@ -72,8 +72,8 @@ class Player(object):
                     elif dalek.rect.y > self.rect.y:
                         dalek.move(0, -20)
             elif d_x < d_y: # the dalek is further above or below, than to the side
-                r_x = rnd.randrange(1, d_x)
-                r_y = rnd.randrange(1, d_y)
+                r_x = rnd.randrange(1, d_x+1)
+                r_y = rnd.randrange(1, d_y+1)
                 r = (r_x / r_y)
                 if r > R:
                     if dalek.rect.x < self.rect.x:
